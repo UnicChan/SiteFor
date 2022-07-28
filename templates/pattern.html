@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="/static/css/tapbar.css" type="text/css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+    </style>
+    <link href="/static/css/pattern.css" type="text/css" rel="stylesheet">
+
+    {% block links_scripts %}{% endblock %}
+
+    <title>{% block title %}{% endblock %}</title>
+
+</head>
+
+<body class="background">
+    <!--NavBar-->
+    <div class="bar">
+        <ul>
+            <li><a href="/">ГЛАВНАЯ</a></li>
+            <li><a href="/posts">ПОСТЫ</a></li>
+            <li><a href="/comments">КОММЕНТАРИИ</a></li>
+            <li><a href="/account">АККАУНТ</a></li>
+            
+            <span class="media">
+                <a href="https://vk.com/id717175837" target="_blank"><img class="icon"
+                        src="/static/images/telegram.png"></a>
+            </span>
+            <span class="media">
+                <a href="https://vk.com/id717175837" target="_blank"><img class="icon"
+                        src="/static/images/vk.png"></a>
+            </span>
+            <span class="media">
+                <a href="https://vk.com/id717175837" target="_blank"><img class="icon"
+                        src="/static/images/whatsapp.png"></a>
+            </span>
+            <span class="media">
+                <a href="https://vk.com/id717175837" target="_blank"><img class="icon"
+                        src="/static/images/twitter.png"></a>
+            </span>
+        </ul>
+    </div>
+    <!--End of NavBar-->
+
+    {% block body %}{% endblock %}
+    <a class="btn" href="/">Main page</a>
+    <a class="btn" href="/make_post">Make ur post</a>
+    <a class="btn" href="/posts">Posts</a>
+
+    <div class="animation-wrapper">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+{% extends 'pattern.html' %}
+
+{% block links_scripts %}
+<link href="../static/css/index.css" type="text/css" rel="stylesheet">
+<link href="../static/css/fire.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
+{% block title%}
+    Main page
+{% endblock %}
+
+{% block body%}
+    <p>The main paige of paiges</p>
+    <section class="cards-wrapper">
+        {% for element in articles %}
+        <div class="card-grid-space">
+            <a class="card" href="/posts/{{ element.number }}"
+                style="--bg-img: url({{ element.img_url }})">
+                <div>
+                    <h1>{{ element.title  }}</h1>
+                    <p>{{ element.intro  }}...</p>
+                    <div class="date">{{ element.date.date() }}</div>
+                    <div class="tags">
+                        <div class="tag">{{ element.tag }}</div>
+                    </div>
+                </div>
+                <!--огонь-->
+                {% if time_checker(element) %}
+                <div class="new_post" style="left: 5%;">
+                    <div class="fire">
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                    </div>
+                </div>
+                <div class="new_post" style="left: 30%; bottom: -25%;">
+                    <div class="fire">
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                    </div>
+                </div>
+                <div class="new_post" style="left: 50%; bottom: -15%;">
+                    <div class="fire">
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                    </div>
+                </div>
+                <div class="new_post" style="left: 70%; bottom: -25%;">
+                    <div class="fire">
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                    </div>
+                </div>
+                <div class="new_post" style="left: 95%;">
+                    <div class="fire">
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                        <figure></figure>
+                    </div>
+                </div>
+                {% endif %}
+                <!--конец огня-->
+            </a>
+        </div>
+        {% endfor %}
+    </section>
+{% endblock %}

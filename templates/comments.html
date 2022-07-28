@@ -1,0 +1,26 @@
+{% extends 'pattern.html' %}
+
+{% block links_scripts %}
+<link href="/static/css/comments.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
+{% block title%}
+    Comments
+{% endblock %}
+
+{% block body%}
+    <p>Comments</p>
+
+
+    {% for element in comments %}
+    <div class="content">
+            <li class="member">
+                <div class="thumb"><img src="{{ element.avatar }}"></div>
+                <div class="description">
+                    <h3>{{ element.name }}</h3>
+                    <p>{{ element.text_post }}<br><a href="https://vk.com/{{ element.name_href }}">{{ element.name_href }}</a></p>
+                </div>
+            </li>
+    </div>
+    {% endfor %}
+{% endblock %}

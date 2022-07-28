@@ -1,0 +1,84 @@
+{% extends 'pattern.html' %}
+
+{% block links_scripts %}
+<link href="/static/css/def_post.css" type="text/css" rel="stylesheet">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat:wght@300;400&family=Open+Sans:wght@500&display=swap');
+</style>
+{% endblock %}
+
+{% block title%}
+{{ article.title }}
+{% endblock %}
+
+{% block body%}
+
+<div class="b_root">
+    <div class="blog_body">
+        <div class="blog">
+            <!--borders-->
+            <div class="border1"></div>
+            <div class="border2"></div>
+            <div class="border3"></div>
+            <div class="border4"></div>
+            <div class="border5"></div>
+            <div class="border6"></div>
+            <div class="border7"></div>
+            <!--borders end-->
+            <!--stripes-->
+            <div class="stripes_top">
+                <p class="thing"
+                    style="height: 0.6rem;background-color: #fffb00;border-right: 1px solid #94918f;border-bottom: 2px solid #94918f; margin-bottom: 50px;">
+                </p>
+                <p class="blog-menu thing" style="width: 100px;margin-bottom: -5px;"></p>
+                <p class="blog-menu thing" style="width: 70px;margin-bottom: -5px;"></p>
+                <p class="blog-menu thing" style="width: 90px;margin-bottom: -5px;"></p>
+                <p class="blog-menu thing" style="width: 100px;margin-bottom: -5px;"></p>
+                <p class="blog-menu thing" style="width: 50px;margin-bottom: -5px;"></p>
+            </div>
+            <div class="stripes_bottom">
+                <p class="blog-menu mention thing"
+                    style="width: 100px;margin-bottom: -13px;background-color: #fffb00;border-right: 2px solid #94918f;border-bottom: 2px solid #94918f; margin-bottom: 1%;">
+                </p>
+                <p class="blog-menu thing"
+                    style="width: 80px;background-color: #fffb00;border-right: 2px solid #94918f;border-bottom: 2px solid #94918f;">
+                </p>
+            </div>
+            <!--stripes end-->
+            <!--blog content-->
+            <div class="title">
+                <div class="title_style">{{ article.title }}</div>
+            </div>
+            <div class="intro_and_text">
+                <h1>&nbsp;&nbsp;&nbsp;«{{ article.intro }}»</h1>
+                <p>{{ article.text }}</p>
+            </div>
+            <div class="tag">
+                <p>{{ article.tag }}</p>
+            </div>
+            <div class="date">
+                <p>{{ article.date.date() }}</p>
+            </div>
+            <div class="crawl">
+                <marquee>
+                    <span>Самый крутой вейпшоп</span>
+                    <span>Как и сайт для него!</span>
+                    <span>Наверное, нужно лайкнуть меня</span>
+                </marquee>
+            </div>
+            <div class="img_url"><img
+                    style="width: 23rem; height: auto;border: 1px solid black;box-shadow: 4px 4px 1px 1px #fffb00;"
+                    src="{{ article.img_url }}"></div>
+            <div class="number">
+                <div class="number_style">
+                    {% if article.number < 10 %} NO<span style="color:#fffb00;text-shadow: 1px 1px black;">.</span>0{{
+                        article.number }} {% else %} NO<span
+                            style="color:#fffb00;text-shadow: 1px 1px black;">.</span>{{ article.number }} {% endif %}
+                </div>
+            </div>
+            <!--blog content end-->
+        </div>
+    </div>
+</div>
+
+    {% endblock %}

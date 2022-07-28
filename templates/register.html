@@ -1,0 +1,41 @@
+{% extends 'pattern.html' %}
+
+{% block links_scripts %}
+<link href="../static/css/authorization.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
+{% block title%}
+    Register
+{% endblock %}
+
+{% block body%}
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+<form method="POST">
+  <div class="container">
+      <div class="leftbox"></div>
+      <div class="rightbox">
+          <div class="">
+              <h1>регистрация </br><span>(только английская раскладка)</span></h1>
+              <h2>логин:</h2>
+              <input type="text" name="login" placeholder="">
+              <h2>пароль:</h2>
+              <input type="password" name="password" placeholder=""></br></br></br>
+              <button class="custom-btn btn-16" type="submit" class="btn">Зарегистрироваться</button>
+              </br></br>
+              <h2>Уже есть аккаунт? <a class="btn" href="/login">войти</a></h2>
+          </div>
+      </div>
+  </div>
+</form>
+
+{% endblock %}

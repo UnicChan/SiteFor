@@ -1,0 +1,15 @@
+{% extends 'pattern.html' %}
+
+{% block links_scripts %}
+<link href="../static/css/board.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
+{% block title%}
+    Board
+{% endblock %}
+
+{% block body%}
+    {% for element in users %}
+    {{ element.login }}
+    {% endfor %}
+{% endblock %}

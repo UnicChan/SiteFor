@@ -1,0 +1,159 @@
+@font-face {
+    font-family: BebasNeue;
+    src: url('/static/fonts/BebasNeue-Bold.ttf') format('truetype');
+    font-style: normal; 
+    font-weight: normal;
+}
+
+.container{
+
+    font-family: 'BebasNeue';
+
+    background-color: #e8e9dd;
+
+    width: 540px;
+
+    height: 450px;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    margin-top: 70px;
+
+    box-shadow: 12px 12px 0px 0px #fffb00;
+
+    border: 1px solid black;
+
+}
+
+.leftbox{
+
+    float: left;
+
+    top: -5%;
+
+    left: 5%;
+
+    position: absolute;
+
+    width: 15%;
+
+    height: 110%;
+
+    overflow: hidden;
+    background-image: repeating-linear-gradient(45deg, #fffb00 -27px, #fffb00 20px, rgba(0, 0, 0, 1) 20px, rgba(0, 0, 0, 1) 60px);
+
+    box-shadow: 2px 3px 10px rgba(119,119,119,.5);
+
+    border: 1px solid black;
+
+}
+
+.rightbox{
+    width: 80%;
+
+    margin-left: 27%;
+
+    padding-top: 1px;
+
+}
+
+.container h1{
+
+    color: black;
+
+    font-size: 1.2cem;
+
+    margin-top: 40px;
+
+    margin-bottom: 35px;
+
+    
+}
+
+.container h2{
+
+    color: black;
+
+    text-transform: uppercase;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    margin-left: 2px;
+
+    margin-top: 10px;
+
+}
+
+.container input, .container p{
+
+    border: 0;
+
+    border-bottom: 1px solid black;
+
+    width: 50%;
+
+    overflow: hidden;
+
+    font-size: 20px;
+
+    padding: 0px 0;
+
+    color: #070707;
+
+    outline: none;
+
+    background-color: #e8e9dd;
+
+}
+
+.container span{
+
+    font-size: 25px;
+
+    color:rgb(0, 0, 0);
+
+}
+
+.custom-btn{
+    width: 145px;
+    height: 50px;
+    color: #fff;
+    font-family: 'Manrope', sans-serif;
+    background: #e8e9dd;
+    cursor: pointer;
+    transition: all .5s ease;
+    position: relative;
+  }
+  .btn-16 {
+      border: 1px solid black;
+      color: black;
+    }
+    .btn-16:after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 100%;
+      top: 0;
+      left: 0;
+      direction: rtl;
+      z-index: 1;
+      box-shadow:
+       -7px -7px 20px 0px #fffb00,
+       -4px -4px 5px 0px #fffb00,
+       7px 7px 20px 0px #fffb00,
+       4px 4px 5px 0px #fffb00;
+      transition: all 0.3s ease;
+    }
+    .btn-16:hover {
+      color: #fffb00;
+      background: black;
+    }
+    .btn-16:hover:after {
+      left: auto;
+      right: 0;
+      width: 100%;
+    }

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: BebasNeue;
+    src: url('/static/fonts/BebasNeue-Bold.ttf') format('truetype');
+    font-style: normal; 
+    font-weight: normal;
+}
+.icon {
+    float: left;
+    margin-right: 20px;
+    margin-top: 8px;
+    width: 48px;
+    height: 48px;
+}
+.bar .logo{
+    margin: 8px 40px 0px 40px;
+}
+.bar .media{
+    float: right;
+}
+.bar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: repeating-linear-gradient(45deg, #fffb00 -27px, #fffb00 20px, rgba(0, 0, 0, 1) 20px, rgba(0, 0, 0, 1) 60px);
+    text-align: center;
+}
+
+.bar li {
+    float: left;
+    padding: 10px 10px;
+    font-size: 37px;
+    transition: .4s;
+}
+
+.bar li a {
+    display: block;
+    text-align: center;
+    font-family: 'BebasNeue';
+    -webkit-text-stroke: 1.5px black;
+    letter-spacing: none;
+    color: #fffb00;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.bar ul:hover li a {
+    filter: blur(2px);
+}
+
+.bar ul:hover li a:hover{
+    filter: blur(0px);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.acc{
+    flex-direction:row;
+    align-self:flex-end;
+}
